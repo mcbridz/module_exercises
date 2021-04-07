@@ -35,9 +35,8 @@ _.find = (array, predicate) => {
 
 
 _.random = (min, max) => {
-  // var clock = new Date()
-  // return (clock.getTime() % (max - min) + min)
-  return Math.floor(Math.random() * (max - min)) + min
+  var clock = new Date()
+  return (clock.getTime() % (max - min) + min)
 }
 
 _.range = (start, stop, step) => {
