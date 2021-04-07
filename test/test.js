@@ -287,30 +287,30 @@ describe('constant', async assert => {
     given: 'integer argument',
     should: 'return a function that returns an integer',
     actual: exercises.constant(testInt),
-    expected: () => { return 5 }
+    expected: testInt
   })
   assert({
     given: 'string argument',
     should: 'return a function that returns a string',
     actual: exercises.constant(testString),
-    expected: () => { return 'Hello' }
+    expected: testString
   })
   assert({
     given: 'object argument',
     should: 'return a function that returns an object',
     actual: exercises.constant(testObject),
-    expected: () => { return { 'Hello': 'World' } }
+    expected: testObject
   })
   assert({
     given: 'array argument',
     should: 'return a function that returns an array',
     actual: exercises.constant(testArray),
-    expected: () => { return ['1', 1, { 'Hello': 'World' }] }
+    expected: testArray
   })
   assert({
     given: 'function argument',
     should: 'return a nested function',
     actual: exercises.constant(testFunc),
-    expected: () => { return () => { return 5 } }
+    expected: testFunc()
   })
 })
